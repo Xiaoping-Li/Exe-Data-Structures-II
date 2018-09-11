@@ -64,7 +64,8 @@ class Heap {
     // if its parent value is less than the value located at the input index
     // This method is only used by the heap itself in order to maintain the heap property
     bubbleUp(index) {
-        while(index > 0) {
+        let swapCompleted = false;
+        while(!swapCompleted) {
             let current = this.storage[index];
             let indexParent = Math.floor((index - 1) / 2);
             let parent = this.storage[indexParent];
@@ -72,7 +73,9 @@ class Heap {
                 this.storage[index] = parent;
                 this.storage[indexParent] = current;
                 index = indexParent;
-            } else { return ;}
+            } else { 
+                swapCompleted = true;
+            }
         }
     }
 
@@ -80,7 +83,21 @@ class Heap {
     // If the larger of the child elements is larger than the parent, the child element is swapped with the parent
     // This method is only used by the heap itself in order to maintain the heap property
     siftDown(index) {
-      
+        let swapCompleted = false;
+        while(!swapCompleted) {
+            const current = this.storage[index];
+            const leftChild = this.storage[2 * index + 1];
+            const rightChild = this.storage[2 * index + 2];
+            let max = {};
+            leftChild > rightChild ? max = {value: leftChild, idx: 2 * index + 1} : max = {value: rightChild, idx: 2 * index + 2};
+            if (max.value > current) {
+            this.storage[index] = max.value;
+            this.storage[max.idx] = current;
+            index = max.idx;
+            } else {
+            swapCompleted = true;
+            }
+        }
     }
 }
 
