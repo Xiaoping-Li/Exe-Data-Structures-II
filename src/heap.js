@@ -47,7 +47,8 @@ class Heap {
         this.storage[0] = lastVal;
         this.storage[this.size - 1] = maxVal;
         this.storage.pop();
-        siftDown(0);
+        this.size -= 1;
+        this.siftDown(0);
     }
 
     // Returns the maximum value in the heap in constant time
