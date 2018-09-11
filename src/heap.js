@@ -1,4 +1,14 @@
 /* eslint-disable */
+/* ***********
+Binary heaps may be represented in a very space-efficient way using an array alone, and do not require pointers 
+between elements. After an element is inserted into or deleted from a heap, the heap property may be violated and
+the heap must be balanced by internal operations. The first (or last) element will contain the root. The next two elements of 
+the array contains its children. The next four contain the four children of the two child nodes, etc. Thus the children of the
+node at position 'n' would be at poistions '2n' and '2n + 1' in a one-based array, or '2n + 1' and '2n + 2' in a zero-based
+array. This allows moving up or down the tree by doing simple index computations. Balancing a heap is done by sift-up or sift-down
+operations (swapping elements which are out of order). As we can build a heap from an array without requiring extra memory (for the
+nodes, for example), heapsort can be used to sort an array in-place. (https://en.wikipedia.org/wiki/Heap_(data_structure)) 
+******************/
 class Heap {
     constructor() {
         this.storage = [null];
