@@ -31,7 +31,10 @@ class Heap {
     // Inserts the given value in the heap
     // Calls bubbleUp in order to put the newly-inserted element in the right place in the heap
     insert(val) {
-
+        if (!this.storage[0]) this.storage[0] = val;
+        this.storage.push(val);
+        const idxOfVal = this.storage.length - 1;
+        this.bubbleUp(idxOfVal);
     }
 
     // Deletes the element located at the front of the heap (the max if a max heap, or a min if a min heap)
