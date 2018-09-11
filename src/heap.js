@@ -18,6 +18,10 @@ nodes, for example), heapsort can be used to sort an array in-place. (https://en
  with valid indices 0 through n-1, then each element 'a' at index 'i' has:
  # children at indices: 2i+1 and 2i+2
  # its parent at index: floor((i-1)/2)
+
+ Alternatively, if the tree root is at index 1, with valid indices 1 through n, then each element 'a' at index 'i' has:
+ # children at indices: 2i and 2i+1
+ # its parent at index: floor(i/2)
  ************/
 class Heap {
     constructor() {
