@@ -33,6 +33,7 @@ class Heap {
     insert(val) {
         if (!this.storage[0]) this.storage[0] = val;
         this.storage.push(val);
+        this.size += 1;
         const idxOfVal = this.storage.length - 1;
         this.bubbleUp(idxOfVal);
     }
