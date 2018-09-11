@@ -14,6 +14,10 @@ nodes, for example), heapsort can be used to sort an array in-place. (https://en
  binary tree, it can be stored compactly. No space is required for 'pointers'; instead, the parent and children of each node can be found by 
  arithmetic on array indices. These properties make this heap implementation a simple example of an 'implicit data structure' or 'Ahnentafel' 
  list.  
+ Let n be the number of elements in the heap and 'i' be an arbitrary valid index of the array storing the heap. If the tree root is at index 0, 
+ with valid indices 0 through n-1, then each element 'a' at index 'i' has:
+ # children at indices: 2i+1 and 2i+2
+ # its parent at index: floor((i-1)/2)
  ************/
 class Heap {
     constructor() {
