@@ -9,6 +9,12 @@ array. This allows moving up or down the tree by doing simple index computations
 operations (swapping elements which are out of order). As we can build a heap from an array without requiring extra memory (for the
 nodes, for example), heapsort can be used to sort an array in-place. (https://en.wikipedia.org/wiki/Heap_(data_structure)) 
 ******************/
+/*************
+ Heaps are commonly implemented with and Array. An binary tree can be stored in an array, but because a binary heap is always a complete 
+ binary tree, it can be stored compactly. No space is required for 'pointers'; instead, the parent and children of each node can be found by 
+ arithmetic on array indices. These properties make this heap implementation a simple example of an 'implicit data structure' or 'Ahnentafel' 
+ list.  
+ ************/
 class Heap {
     constructor() {
         this.storage = [null];
