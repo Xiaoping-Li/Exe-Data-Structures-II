@@ -29,7 +29,7 @@ class Heap {
 
     // Returns the storage array
     getStorage() {
-
+        return this.storage;
     }
 
     // Moves the element at the specified index "up" by swapping it with its parent 
