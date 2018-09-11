@@ -34,11 +34,12 @@ class Heap {
         if (!this.storage[0]) {
             this.storage[0] = val;
             this.size += 1; 
-           }
-        this.storage.push(val);
-        this.size += 1;
-        const idxOfVal = this.size - 1;
-        this.bubbleUp(idxOfVal);
+        } else {
+            this.storage.push(val);
+            this.size += 1;
+            const idxOfVal = this.size - 1;
+            this.bubbleUp(idxOfVal);
+        }
     }
 
     // Deletes the element located at the front of the heap (the max if a max heap, or a min if a min heap)
