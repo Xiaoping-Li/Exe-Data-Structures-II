@@ -68,8 +68,7 @@ class Heap {
                 this.storage[index] = parent;
                 this.storage[indexParent] = current;
                 index = indexParent;
-            }
-            return;
+            } else { return ;}
         }
     }
 
