@@ -100,7 +100,7 @@ class Heap {
             const leftChild = this.storage[2 * index + 1];
             const rightChild = this.storage[2 * index + 2];
             let max = {};
-            leftChild > rightChild ? max = {value: leftChild, idx: 2 * index + 1} : max = {value: rightChild, idx: 2 * index + 2};
+            leftChild >= rightChild ? max = {value: leftChild, idx: 2 * index + 1} : max = {value: rightChild, idx: 2 * index + 2};
             if (max.value > current) {
             this.storage[index] = max.value;
             this.storage[max.idx] = current;
