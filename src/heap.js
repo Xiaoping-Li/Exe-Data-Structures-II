@@ -31,10 +31,13 @@ class Heap {
     // Inserts the given value in the heap
     // Calls bubbleUp in order to put the newly-inserted element in the right place in the heap
     insert(val) {
-        if (!this.storage[0]) this.storage[0] = val;
+        if (!this.storage[0]) {
+            this.storage[0] = val;
+            this.size += 1; 
+           }
         this.storage.push(val);
         this.size += 1;
-        const idxOfVal = this.storage.length - 1;
+        const idxOfVal = this.size - 1;
         this.bubbleUp(idxOfVal);
     }
 
@@ -49,6 +52,7 @@ class Heap {
         this.storage.pop();
         this.size -= 1;
         this.siftDown(0);
+        return maxVal;
     }
 
     // Returns the maximum value in the heap in constant time
