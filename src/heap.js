@@ -60,7 +60,17 @@ class Heap {
     // if its parent value is less than the value located at the input index
     // This method is only used by the heap itself in order to maintain the heap property
     bubbleUp(index) {
-
+        while(index > 0) {
+            let current = this.storage[index];
+            let indexParent = Math.floor((index - 1) / 2);
+            let parent = this.storage[indexParent];
+            if (parent < current) {
+                this.storage[index] = parent;
+                this.storage[indexParent] = current;
+                index = indexParent;
+            }
+            return;
+        }
     }
 
     // First grabs the indices of this element's children and determines which of the children are larger
