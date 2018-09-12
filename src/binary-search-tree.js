@@ -17,16 +17,28 @@ value is retrieved.
  ******** */
 
 /* ********
-    1
-  2   3
+Tree Traversal: process of visiting each node in the tree exactly once in some order.
+Visit: Reading / Processing data in a node 
+******** */
+
+/* ********
+      1
+  2       3
 4   5
 BFS: Breadth First Traversal (Or Level Order Traversal) : 1 2 3 4 5
 DFS: Depth First Traversals
   ## Inorder Traversal (Left-Root-Right) : 4 2 5 1 3
   ## Preorder Traversal (Root-Left-Right) : 1 2 4 5 3
   ## Postorder Traversal (Left-Right-Root) : 4 5 2 3 1
+(https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/)
 
+In Breadth-First approach: for any node we visit all its children before visiting any of 
+                           its grandchildren.
+In Depth-First approach: if we would go to a child, we would complete the whole subtree 
+                           of the child, before going to the next child;
 ******** */
+
+
 class BinarySearchTree {
   constructor(value) {
     this.value = value;
