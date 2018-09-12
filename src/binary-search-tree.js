@@ -7,6 +7,12 @@
 ## The left subtree of a node contains only nodes with keys lesser than or equal to the node's key
 ## The right subtree of a node contains only nodes with keys greater than the node's key
 ## The left and right subtree each must also be a binary search tree
+(left_subtree(keys) <= node(key) <= right_subtree(keys))
+
+Representation: 
+BST is a collection of nodes arranged in a way where they maintain BST properties. Each node has a key and an 
+associated value. While searching, the desired key is compared to the keys in BST and if found, the associated 
+value is retrieved.
  ******** */
 class BinarySearchTree {
   constructor(value) {
