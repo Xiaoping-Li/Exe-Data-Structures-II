@@ -13,6 +13,7 @@ Representation:
 BST is a collection of nodes arranged in a way where they maintain BST properties. Each node has a key and an 
 associated value. While searching, the desired key is compared to the keys in BST and if found, the associated 
 value is retrieved.
+(https://www.tutorialspoint.com/data_structures_algorithms/binary_search_tree.htm)
  ******** */
 class BinarySearchTree {
   constructor(value) {
