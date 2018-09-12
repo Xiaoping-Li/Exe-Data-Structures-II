@@ -19,6 +19,13 @@ in that it stores sequences of values rather than individual single values. EAch
 value of item | of the input list'. This is different to a binary tree which compares the single searched value 
 to each node. (https://stackoverflow.com/questions/4737904/difference-between-tries-and-trees)
  *************** */
+
+/* ************* A 'Binary Search Tree' is a dynamic version of what happens during 'Quicksort'. A 'Trie' is a dynamic
+version of what happens during 'radix sort'. You look at the first bit or digit of a number (or first letter of a string)
+to determine which subtree the value belongs in. You then repeat the procedure recursively using the next character or 
+digit to determine which of the subtree's children it belongs in, and so on. 
+(https://www.quora.com/How-do-tries-differ-from-binary-search-trees)
+ *************** */
 class Tree {
   constructor(value) {
     this.value = value;
