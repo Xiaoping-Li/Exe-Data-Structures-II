@@ -15,6 +15,18 @@ associated value. While searching, the desired key is compared to the keys in BS
 value is retrieved.
 (https://www.tutorialspoint.com/data_structures_algorithms/binary_search_tree.htm)
  ******** */
+
+/* ********
+    1
+  2   3
+4   5
+BFS: Breadth First Traversal (Or Level Order Traversal) : 1 2 3 4 5
+DFS: Depth First Traversals
+  ## Inorder Traversal (Left-Root-Right) : 4 2 5 1 3
+  ## Preorder Traversal (Root-Left-Right) : 1 2 4 5 3
+  ## Postorder Traversal (Left-Right-Root) : 4 5 2 3 1
+
+******** */
 class BinarySearchTree {
   constructor(value) {
     this.value = value;
