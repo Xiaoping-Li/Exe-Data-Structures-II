@@ -11,6 +11,14 @@ Alternatively, a TREE can be defined abstractly as a whole (globally) as an 'ord
 node. A given node only contains the list of its children, but does not contain a referene to its parent.
 (Wikipedia: https://en.wikipedia.org/wiki/Tree_(data_structure))
 ******** */
+
+/* *************A TREE is a general structure of recursive nodes. There are many types of trees. Popular ones
+are 'binary tree' and 'balanced tree'. A TRIE is a kind of tree, known by many names including prefix tree,
+digital search tree, and retrieval tree. A TRIE represents a sequence in its structure. It is very different
+in that it stores sequences of values rather than individual single values. EAch level of recursion says 'What is 
+value of item | of the input list'. This is different to a binary tree which compares the single searched value 
+to each node. (https://stackoverflow.com/questions/4737904/difference-between-tries-and-trees)
+ *************** */
 class Tree {
   constructor(value) {
     this.value = value;
