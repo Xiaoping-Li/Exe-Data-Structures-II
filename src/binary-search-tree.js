@@ -25,9 +25,28 @@ class BinarySearchTree {
   // assigns it to either the left or right subtree,
   // depending on its value
 
-  // insert(value) {
-
-  // }
+  insert(value) {
+    let swapCompleted = false;
+    const newNode = new BinarySearchTree(value);
+    let root = this;
+ 
+    while (!swapCompleted) {
+      if (root.value >= value) {
+        if (!root.left) {
+          root.left = newNode;
+          swapCompleted = true;
+        }
+        root = root.left;
+      } else {
+        if (!root.right) {
+          root.right = newNode;
+          swapCompleted = true;
+        }
+        root = root.right;
+      } 
+    }
+    return newNode;  
+  }
 
   // Checks the binary search tree for the input target
   // Can be written recursively or iteratively
