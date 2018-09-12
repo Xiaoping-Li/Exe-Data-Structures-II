@@ -2,6 +2,12 @@
 /* eslint-disable global-require */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-trailing-spaces */
+
+/* ********Binary Search Tree is a node-based binary tree data structure which has the following properties:
+## The left subtree of a node contains only nodes with keys lesser than or equal to the node's key
+## The right subtree of a node contains only nodes with keys greater than the node's key
+## The left and right subtree each must also be a binary search tree
+ ******** */
 class BinarySearchTree {
   constructor(value) {
     this.value = value;
