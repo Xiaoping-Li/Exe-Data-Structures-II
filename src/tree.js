@@ -1,5 +1,16 @@
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable no-unused-vars */
+/* *********A TREE is a widely used 'abstract data type (ADT)' that simulates a hierarchical tree structure, with a root 
+value and 'subtrees' of children with a parent node, represented as a set of linked nodes.
+
+A TREE data structure can be defined recursively (locally) as a collection of nodes (starting at a root node), where each
+node is a data structure consisting of a value, together with a list of references to nodes (the "children"), with the 
+constraints that no reference is duplicated, and none points to the root.
+
+Alternatively, a TREE can be defined abstractly as a whole (globally) as an 'ordered tree', with a value assigned to each
+node. A given node only contains the list of its children, but does not contain a referene to its parent.
+(Wikipedia: https://en.wikipedia.org/wiki/Tree_(data_structure))
+******** */
 class Tree {
   constructor(value) {
     this.value = value;
