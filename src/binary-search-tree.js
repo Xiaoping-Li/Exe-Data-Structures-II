@@ -38,7 +38,6 @@ In Depth-First approach: if we would go to a child, we would complete the whole 
                            of the child, before going to the next child;
 ******** */
 
-
 class BinarySearchTree {
   constructor(value) {
     this.value = value;
@@ -103,9 +102,16 @@ class BinarySearchTree {
   // You'll need the queue-helper file for this. Or could you roll your own queue
   // again. Whatever floats your boat.
 
-  // breadthFirstForEach(cb) {
-
-  // }
+  breadthFirstForEach(cb) {
+    const queue = [];
+    queue.push(this);
+    while (queue.length !== 0) {
+      const currentNode = queue.shift();
+      cb(currentNode.value);
+      if (currentNode.left) queue.push(currentNode.left);
+      if (currentNode.right) queue.push(currentNode.right); 
+    } 
+  }
 }
 
 module.exports = BinarySearchTree;
